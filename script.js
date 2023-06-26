@@ -1,34 +1,42 @@
 let button = document.getElementById('button'); // creating two variables
 let outputtext = document.getElementById('outputtext');
-// let attemptsleft = 3
 
-let chances = 3; 
+let chances = 3;
+
+// const guess =1; 
 
 let number = [Math.floor(Math.random() * 10)] // creating a variable which just holds a number
-// let attemptsleftelement = document.querySelector('#attempts-left')
-// let txtnumber = document.querySelector('#inputtext')
 
-
-// let guesscount = 3 ;
 
 console.log(number);
 
 button.addEventListener('click', function() {
 
 
-
     let input = document.getElementById('inputtext').value; // to get the value the user submitted
 
 
+
+
+    
      if (input < number) {
-        outputtext.innerHTML = "C'est ➕"
+        outputtext.innerHTML += `<pre><h3> 1er Essai </h3> </pre> ${input}? ...c'est ➕ `
     }
 
     else if (input > number) {
-        outputtext.innerHTML = "C'est ➖"
+        outputtext.innerHTML += `<pre> <h3> 2ème Essai </h3> </pre> ${input}? ...c'est ➖ `
     }
  
-    // else if(isNaN(input)){
+
+    else {
+        outputtext.innerHTML += `<h3> 3ème Essai </h3> <pre> <h2> Gagné! 🙂</h2> </pre> <pre> numéro mystère : ${number} </pre>`
+    };
+
+    
+    
+
+
+        // else if(isNaN(input)){
     //     outputtext.innerHTML= "That's not a number!"
     // }
 
@@ -40,23 +48,22 @@ button.addEventListener('click', function() {
     //     outputtext.innerHTML= "Please, enter a number greater than 1"
     // }
 
-    else {
-        outputtext.innerHTML = `<h2> Gagné! 🙂</h2> <pre> numéro mystère : ${number} </pre>`
-        location.reload();
-    };
-    
+
+
+
+
 chances--;
 if (chances === 0) {
     outputtext.innerHTML = `<h2> Perdu! ☹️</h2> <pre> numéro mystère : ${number} </pre>`
+
 }
+
+
+
+
+
+
+
 }
+
 )
-
-
-
-
-
-
-
-
-

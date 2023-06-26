@@ -13,9 +13,10 @@
 
 
     <div class="vh-100 d-flex align-items-center justify-content-center">
-    <input class="text-center rounded d-flex align-items-center justify-content-center " style="height: 60px; border-color: rgba(211, 209, 209, 0.753);"
-     type="text" name="Entrer un chiffre" id="inputtext" placeholder="Entrer un chiffre" >
+    <input type="number" class="text-center rounded d-flex align-items-center justify-content-center" min="1" max="10" style="width: 170px; height: 60px; border-color: rgba(211, 209, 209, 0.753);"
+      name="Entrer un chiffre" id="inputtext" placeholder="Entrer un chiffre" >
      
+
      
     <button class="btn btn-outline-secondary" style="margin: 10px;" id="button" >Tester</button>
 
@@ -29,12 +30,11 @@
  
     <hr>
 
-    <h3>1er essai</h3>
     
-    <p id="outputtext"></p>
+    <p id="outputtext">  </p>
 
 
-    <p>Attemps left <span id="attempts-left">3</span></p>
+    <p><span id="attempts-left"></span></p>
 </div>
 
 </div>
