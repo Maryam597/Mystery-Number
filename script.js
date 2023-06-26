@@ -20,17 +20,6 @@ button.addEventListener('click', function() {
     let input = document.getElementById('inputtext').value; // to get the value the user submitted
 
 
-    
-// if (attemptsleft >0){
-//     attemptsleft--;
-//     attemptsleftelement = attemptsleft;
-//     let guess = Number(txtnumber.value);
-// }
-// else {
-//     outputtext.innerHTML = "Perdu!"
-// }
-
-
      if (input < number) {
         outputtext.innerHTML = "C'est ➕"
     }
