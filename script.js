@@ -2,13 +2,14 @@ let button = document.getElementById('button'); // creating two variables
 let outputtext = document.getElementById('outputtext');
 // let attemptsleft = 3
 
+let chances = 3; 
 
 let number = [Math.floor(Math.random() * 10)] // creating a variable which just holds a number
 // let attemptsleftelement = document.querySelector('#attempts-left')
 // let txtnumber = document.querySelector('#inputtext')
 
 
-let guesscount = 3 ;
+// let guesscount = 3 ;
 
 console.log(number);
 
@@ -52,7 +53,21 @@ button.addEventListener('click', function() {
 
     else {
         outputtext.innerHTML = `You guessed right , your number was ${number}`
-    }
-})
+        location.reload();
+    };
+    
+chances--;
+if (chances === 0) {
+    outputtext.innerHTML = `<h3> Perdu! ☹️</h3> <pre> numéro mystère : ${number} </pre>  `
+}
+}
+)
+
+
+
+
+
+
+
 
 
