@@ -1,0 +1,21 @@
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+#game {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    border: 1px solid #000000; 
+    padding: 30px;
+}
+
+hr {
+	border-top: 1px solid #8c8b8b;
+}
