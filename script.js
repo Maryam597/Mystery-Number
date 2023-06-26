@@ -52,13 +52,13 @@ button.addEventListener('click', function() {
     // }
 
     else {
-        outputtext.innerHTML = `You guessed right , your number was ${number}`
+        outputtext.innerHTML = `<h2> Gagné! 🙂</h2> <pre> numéro mystère : ${number} </pre>`
         location.reload();
     };
     
 chances--;
 if (chances === 0) {
-    outputtext.innerHTML = `<h3> Perdu! ☹️</h3> <pre> numéro mystère : ${number} </pre>  `
+    outputtext.innerHTML = `<h2> Perdu! ☹️</h2> <pre> numéro mystère : ${number} </pre>`
 }
 }
 )
