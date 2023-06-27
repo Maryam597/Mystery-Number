@@ -1,9 +1,8 @@
 let button = document.getElementById('button'); // creating two variables
 let outputtext = document.getElementById('outputtext');
 
-let chances = 3;
+let chances = 1;
 
-// const guess =1; 
 
 let number = [Math.floor(Math.random() * 10)] // creating a variable which just holds a number
 
@@ -20,20 +19,20 @@ button.addEventListener('click', function() {
 
     
      if (input < number) {
-        outputtext.innerHTML += `<pre><h3> 1er Essai </h3> </pre> ${input}? ...c'est ➕ `
+        outputtext.innerHTML += `<pre><h3> ${chances}er Essai </h3> </pre> ${input}? ...c'est ➕ `
     }
 
     else if (input > number) {
-        outputtext.innerHTML += `<pre> <h3> 2ème Essai </h3> </pre> ${input}? ...c'est ➖ `
+        outputtext.innerHTML += `<pre> <h3> ${chances}ème Essai </h3> </pre> ${input}? ...c'est ➖ `
     }
  
 
     else {
-        outputtext.innerHTML += `<h3> 3ème Essai </h3> <pre> <h2> Gagné! 🙂</h2> </pre> <pre> numéro mystère : ${number} </pre>`
-    };
+        outputtext.innerHTML = `<h3> ${chances}ème Essai </h3> <pre> <h2> Gagné! 🙂</h2> </pre> <pre> numéro mystère : ${number} </pre>`
+    }
 
-    
-    
+    chances++;
+    console.log(chances);
 
 
         // else if(isNaN(input)){
