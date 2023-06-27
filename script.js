@@ -1,68 +1,25 @@
 let button = document.getElementById('button'); // creating two variables
-let outputtext = document.getElementById('outputtext');
+let outputtext = document.getElementById('game');
+let input = document.getElementById('inputtext');
 
 let chances = 1;
-
-
-let number = [Math.floor(Math.random() * 10)] // creating a variable which just holds a number
-
-
+let number = Math.floor(Math.random() * 10); // creating a variable which just holds a number
 console.log(number);
 
 button.addEventListener('click', function() {
 
-
-    let input = document.getElementById('inputtext').value; // to get the value the user submitted
-
-
-
-
-    
-     if (input < number) {
-        outputtext.innerHTML += `<pre><h3> ${chances}er Essai </h3> </pre> ${input}? ...c'est ➕ `
+    if (input.value < number) {
+        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}er Essai </h3><p class="text-center"> ${input.value}? ...c'est ➕</p>`
     }
-
-    else if (input > number) {
-        outputtext.innerHTML += `<pre> <h3> ${chances}ème Essai </h3> </pre> ${input}? ...c'est ➖ `
+    else if (input.value > number) {
+        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}ème Essai </h3><p class="text-center"> ${input.value}? ...c'est ➖</p>`
     }
- 
-
     else {
-        outputtext.innerHTML = `<h3> ${chances}ème Essai </h3> <pre> <h2> Gagné! 🙂</h2> </pre> <pre> numéro mystère : ${number} </pre>`
+        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}ème Essai </h3><p class="text-center">  <h2> Gagné! 🙂</h2>  numéro mystère : ${number}</p>`
     }
-
     chances++;
-    console.log(chances);
 
-
-        // else if(isNaN(input)){
-    //     outputtext.innerHTML= "That's not a number!"
-    // }
-
-    // else if(input > 10){
-    //     outputtext.innerHTML= "Please, enter a number lower than 10"
-    // }
-
-    // else if(input < 10){
-    //     outputtext.innerHTML= "Please, enter a number greater than 1"
-    // }
-
-
-
-
-
-chances--;
-if (chances === 0) {
-    outputtext.innerHTML = `<h2> Perdu! ☹️</h2> <pre> numéro mystère : ${number} </pre>`
-
-}
-
-
-
-
-
-
-
-}
-
-)
+    if (chances === 3) {
+        outputtext.innerHTML = `<hr><h2> Perdu! ☹️</h2>  numéro mystère : ${number}`
+    }
+});
