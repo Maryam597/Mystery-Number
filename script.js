@@ -20,13 +20,17 @@ button.addEventListener('click', function() {
         outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}ème Essai </h3><p class="text-center"> ${input.value}? ...c'est ➖</p>`
     }
 
-    else if (chances === 3 && input.value != number ) {
-        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}ème Essai </h3><p class="text-center">  <h2> Perdu! ☹️</h2>  numéro mystère : ${number}</p>`
+  
 
+    else if  (input.value = number){
+        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}ème Essai </h3><p class="text-center">  <h2> Gagné! 🙂</h2>  numéro mystère : ${number}</p>`;
     }
 
-    else  (input.value = number){
-        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}ème Essai </h3><p class="text-center">  <h2> Gagné! 🙂</h2>  numéro mystère : ${number}</p>`
+    console.log(chances);
+
+    if (chances === 3 && input.value != number ) {
+        outputtext.innerHTML += `<h2 class="text-center"> Perdu! ☹️</h2> <p class="text-center"> numéro mystère : ${number}</p>`
+
     }
 
        
