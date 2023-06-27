@@ -17,17 +17,17 @@ button.addEventListener('click', function() {
     if (chances <= 3){
 
     if (input.value < number) {
-        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}er Essai </h3><p class="text-center"> ${input.value}? ...c'est ➕</p>`
+        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}${chances < 2 ? "<sup>er</sup>" : "<sup>ème</sup>" } Essai </h3><p class="text-center"> ${input.value}? ... c'est ➕</p>`
     }
 
     else if (input.value > number) {
-        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}ème Essai </h3><p class="text-center"> ${input.value}? ...c'est ➖</p>`
+        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}${chances < 2 ? "<sup>er</sup>" : "<sup>ème</sup>" }  Essai </h3><p class="text-center"> ${input.value}? ... c'est ➖</p>`
     }
 
   
 
     else if  (input.value = number){
-        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}ème Essai </h3>  <h2 class="text-center"> Gagné! 🙂</h2> <p class="text-center"> numéro mystère : ${number}</p>
+        outputtext.innerHTML += `<hr><h3 class="text-center"> ${chances}${chances < 2 ? "<sup>er</sup>" : "<sup>ème</sup>" }  Essai </h3>  <h2 class="text-center"> Gagné! 🙂</h2> <p class="text-center"> numéro mystère : ${number}</p>
         <div class="text-center"> <button class="btn btn-primary" type="submit" onclick="refresh()" >Rejouer</button> </div>`;
         
     }
